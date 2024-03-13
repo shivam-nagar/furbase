@@ -17,3 +17,16 @@ model User {
   updatedAt DateTime @updatedAt
   username  String   @unique
 }
+
+model Pet {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  name      String?
+  updatedAt DateTime @updatedAt
+}
+
+model Update {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  updatedAt DateTime @updatedAt
+}
